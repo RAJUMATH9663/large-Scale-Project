@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}Rate Service{% endblock %}
+{% block content %}
+<div class="container section">
+  <div style="max-width:520px;margin:0 auto;">
+    <div class="card">
+      <div class="text-center mb-3">
+        <div style="font-size:3rem;margin-bottom:.8rem;">⭐</div>
+        <h2 style="font-size:1.4rem;font-weight:800;">Rate Your Experience</h2>
+        <p class="text-muted fs-sm">{{ booking.service.name }} on {{ booking.booking_date }}</p>
+        {% if booking.employee %}
+        <div style="margin-top:.8rem;font-size:.9rem;">
+          Professional: <strong>{{ booking.employee.user.get_full_name }}</strong>
+        </div>
+        {% endif %}
+      </div>
+
+      <form method="post">
+        {% csrf_token %}
+        <div class="form-group text-center">
+          <label class="form-label">Your Rating</label>
+          <div id="starDisplay" style="font-size:3rem;margin:.5rem 0;cursor:pointer;display:flex;justify-content:center;gap:.3rem;">
+            {% for i in "12345" %}
+            <span class="star" data-val="{{ forloop.counter }}" onclick="setRating({{ forloop.counter }})" style="color:rgba(255,255,255,.2);transition:color .2s;">★</span>
+            {% endfor %}
+          </div>
+          <input type="hidden" name="rating" id="ratingInput" value="">
+          <div id="ratingLabel" class="text-muted fs-sm">Click a star to rate</div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Your Review</label>
+          <textarea name="comment" class="form-control" rows="4" placeholder="Share your experience with this service..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitRating" disabled>
+          <i class="fas fa-star"></i> Submit Review
+        </button>
+      </form>
+    </div>
+    <div class="text-center mt-2">
+      <a href="{% url 'my_bookings' %}" class="btn btn-secondary btn-sm">← Skip for now</a>
+    </div>
+  </div>
+</div>
+
+<script>
+const labels = {1:'Poor 😞',2:'Fair 😐',3:'Good 😊',4:'Very Good 😄',5:'Excellent 🌟'};
+function setRating(val) {
+  document.querySelectorAll('.star').forEach((s,i) => {
+    s.style.color = i < val ? '#f6d365' : 'rgba(255,255,255,.2)';
+  });
+  document.getElementById('ratingInput').value = val;
+  document.getElementById('ratingLabel').textContent = labels[val];
+  document.getElementById('ratingLabel').style.color = '#f6d365';
+  document.getElementById('submitRating').disabled = false;
+}
+document.querySelectorAll('.star').forEach(s => {
+  s.addEventListener('mouseover', () => {
+    const v = parseInt(s.dataset.val);
+    document.querySelectorAll('.star').forEach((st,i) => { st.style.color = i<v?'#f6d365':'rgba(255,255,255,.2)'; });
+  });
+});
+document.getElementById('starDisplay').addEventListener('mouseleave', () => {
+  const val = parseInt(document.getElementById('ratingInput').value) || 0;
+  document.querySelectorAll('.star').forEach((s,i) => { s.style.color = i<val?'#f6d365':'rgba(255,255,255,.2)'; });
+});
+</script>
+{% endblock %}

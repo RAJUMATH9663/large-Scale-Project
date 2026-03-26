@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block title %}Payment – ₹{{ amount_display }}{% endblock %}
+{% block content %}
+<div class="container section">
+  <div style="max-width:600px;margin:0 auto;">
+
+    <!-- ORDER SUMMARY -->
+    <div class="card mb-3">
+      <div class="card-header"><i class="fas fa-receipt"></i> Order Summary</div>
+      <table class="invoice-table" style="margin:0;">
+        <tr><td class="text-muted">Service</td><td><strong>{{ booking.service.name }}</strong></td></tr>
+        <tr><td class="text-muted">Date</td><td>{{ booking.booking_date }}</td></tr>
+        <tr><td class="text-muted">Time Slot</td><td>{{ booking.time_slot }}</td></tr>
+        <tr><td class="text-muted">Address</td><td>{{ booking.address|truncatewords:10 }}</td></tr>
+        <tr><td class="text-muted">Booking ID</td><td>#{{ booking.id }}</td></tr>
+      </table>
+      <div class="invoice-total mt-3">
+        <span>Total Amount</span>
+        <span class="text-success">₹{{ amount_display }}</span>
+      </div>
+    </div>
+
+    <!-- PAY BUTTON -->
+    <div class="card text-center">
+      <div style="font-size:3rem;margin-bottom:1rem;">💳</div>
+      <h3 style="margin-bottom:.5rem;">Secure Payment</h3>
+      <p class="text-muted fs-sm mb-3">Powered by Razorpay</p>
+
+      <button id="payBtn" class="btn btn-primary btn-lg btn-block" onclick="initiatePayment()">
+        <i class="fas fa-lock"></i> Pay ₹{{ amount_display }} Securely
+      </button>
+
+      <div style="margin-top:1rem;font-size:.75rem;color:var(--text-muted);">
+        <i class="fas fa-shield-alt"></i> 256-bit SSL Encrypted &nbsp;|&nbsp; Razorpay Secured
+      </div>
+    </div>
+
+    <!-- Hidden form for POST -->
+    <form id="paymentForm" action="{% url 'payment_success' %}" method="POST" style="display:none;">
+      {% csrf_token %}
+      <input type="hidden" name="razorpay_order_id" id="rzp_order_id">
+      <input type="hidden" name="razorpay_payment_id" id="rzp_payment_id">
+      <input type="hidden" name="razorpay_signature" id="rzp_signature">
+      <input type="hidden" name="booking_id" value="{{ booking.id }}">
+    </form>
+
+  </div>
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+function initiatePayment() {
+  const options = {
+    key: '{{ razorpay_key_id }}',
+    amount: {{ amount }},
+    currency: 'INR',
+    name: 'HomeServices',
+    description: '{{ booking.service.name }}',
+    order_id: '{{ razorpay_order_id }}',
+    image: '',
+    prefill: {
+      name: '{{ request.user.get_full_name }}',
+      email: '{{ request.user.email }}',
+    },
+    theme: { color: '#6c63ff' },
+    handler: function(response) {
+      document.getElementById('rzp_order_id').value   = response.razorpay_order_id;
+      document.getElementById('rzp_payment_id').value = response.razorpay_payment_id;
+      document.getElementById('rzp_signature').value  = response.razorpay_signature;
+      document.getElementById('paymentForm').submit();
+    },
+    modal: {
+      ondismiss: function() {
+        document.getElementById('payBtn').innerHTML = '<i class="fas fa-lock"></i> Pay ₹{{ amount_display }} Securely';
+        document.getElementById('payBtn').disabled = false;
+      }
+    }
+  };
+  const rzp = new Razorpay(options);
+  rzp.on('payment.failed', function(resp) {
+    alert('Payment failed: ' + resp.error.description);
+  });
+  document.getElementById('payBtn').innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening Payment...';
+  document.getElementById('payBtn').disabled = true;
+  rzp.open();
+}
+</script>
+{% endblock %}
