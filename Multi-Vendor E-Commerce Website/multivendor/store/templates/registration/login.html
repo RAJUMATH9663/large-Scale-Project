@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container" style="max-width: 500px; margin: 4rem auto;">
+    <div class="card" style="padding: 2rem;">
+        <div class="page-header" style="text-align: center; margin-bottom: 2rem;">
+            <h2><i class="fa-solid fa-right-to-bracket"></i> Login</h2>
+            <p>Welcome back! Please login to your account.</p>
+        </div>
+
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+
+            {% if form.errors %}
+            <div style="background: #fee2e2; color: #b91c1c; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                <p style="margin: 0;"><i class="fa-solid fa-circle-exclamation"></i> Invalid username or password.</p>
+            </div>
+            {% endif %}
+
+            <div style="margin-bottom: 1.5rem;">
+                <label for="id_username"
+                    style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Username</label>
+                <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username"
+                    maxlength="150" required="" id="id_username"
+                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem;">
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+                <label for="id_password"
+                    style="display: block; font-weight: 500; margin-bottom: 0.5rem;">Password</label>
+                <input type="password" name="password" autocomplete="current-password" required="" id="id_password"
+                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem;">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100" style="padding: 0.8rem; font-size: 1.1rem;"><i
+                    class="fa-solid fa-arrow-right-to-bracket"></i> Sign In</button>
+            <input type="hidden" name="next" value="{{ next }}">
+        </form>
+    </div>
+</div>
+{% endblock %}

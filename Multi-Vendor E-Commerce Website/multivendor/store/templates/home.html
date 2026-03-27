@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-header">
+    <h2><i class="fa-solid fa-fire"></i> Trending Products</h2>
+    <p>Discover the latest and greatest items from our vendors.</p>
+</div>
+
+<div class="product-container">
+    {% for product in products %}
+    <div class="card product-card">
+        <div class="product-img-wrapper">
+            {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% else %}
+            <div class="no-image"><i class="fa-solid fa-image"></i></div>
+            {% endif %}
+            <div class="product-overlay">
+                <a href="{% url 'add_to_cart' product.id %}" class="btn btn-icon">
+                    <i class="fa-solid fa-cart-plus"></i> Quick Add
+                </a>
+            </div>
+        </div>
+        <div class="product-info">
+            <h3 class="product-title">{{ product.name }}</h3>
+            <p class="product-price">₹{{ product.price }}</p>
+            <a href="{% url 'add_to_cart' product.id %}" class="btn btn-primary btn-block mt-2">Add to Cart</a>
+        </div>
+    </div>
+    {% empty %}
+    <div class="empty-state">
+        <i class="fa-solid fa-box-open mb-3" style="font-size: 3rem; color: var(--text-muted);"></i>
+        <h3>No products available</h3>
+        <p>Check back later for exciting new items!</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% include "pagination.html" with page_obj=products %}
+{% endblock %}

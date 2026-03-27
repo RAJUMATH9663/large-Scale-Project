@@ -1,0 +1,21 @@
+{% if page_obj.has_other_pages %}
+<div class="pagination"
+    style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem; margin-bottom: 2rem;">
+    {% if page_obj.has_previous %}
+    <a href="?page=1" class="btn btn-icon" style="text-decoration: none;"><i class="fa-solid fa-angles-left"></i></a>
+    <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-primary"
+        style="text-decoration: none;">Previous</a>
+    {% endif %}
+
+    <span class="current-page"
+        style="display: flex; align-items: center; justify-content: center; padding: 0.5rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; font-weight: 500;">
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+    </span>
+
+    {% if page_obj.has_next %}
+    <a href="?page={{ page_obj.next_page_number }}" class="btn btn-primary" style="text-decoration: none;">Next</a>
+    <a href="?page={{ page_obj.paginator.num_pages }}" class="btn btn-icon" style="text-decoration: none;"><i
+            class="fa-solid fa-angles-right"></i></a>
+    {% endif %}
+</div>
+{% endif %}

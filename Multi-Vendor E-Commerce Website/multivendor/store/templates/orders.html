@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-header">
+    <h2><i class="fa-solid fa-box"></i> Order History</h2>
+    <p>View your past purchases below.</p>
+</div>
+
+<div class="orders-container">
+    {% if orders %}
+    <div class="orders-list">
+        {% for order in orders %}
+        <div class="order-card card">
+            <div class="order-icon">
+                <i class="fa-solid fa-check-circle"></i>
+            </div>
+            <div class="order-details">
+                <h4 class="order-product">{{ order.product.name }}</h4>
+                <p class="order-date"><i class="fa-regular fa-clock"></i> Ordered on: {{ order.ordered_at|date:"M d, Y
+                    h:i A" }}</p>
+            </div>
+            <div class="order-status badge-success">
+                Completed
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state card">
+        <i class="fa-solid fa-receipt mb-3" style="font-size: 3rem; color: var(--text-muted);"></i>
+        <h3>No orders yet</h3>
+        <p>When you place an order, it will appear here.</p>
+        <a href="{% url 'home' %}" class="btn btn-primary mt-3">Go to Store</a>
+    </div>
+    {% endif %}
+</div>
+
+{% include "pagination.html" with page_obj=orders %}
+{% endblock %}

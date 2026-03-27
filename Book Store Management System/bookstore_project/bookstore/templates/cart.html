@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart</title>
+    <style>
+        body { font-family: Arial; background:#f9f9f9; }
+        .navbar { background:#34495e; color:white; padding:15px; text-align:center; font-size:22px; }
+        .card {
+            background:white;
+            margin:20px;
+            padding:15px;
+            border-radius:8px;
+            box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">Your Cart</div>
+
+{% for item in cart_items %}
+<div class="card">
+    <h3>{{ item.book.title }}</h3>
+    <p>Price: ₹{{ item.book.price }}</p>
+    <p>Quantity: {{ item.quantity }}</p>
+</div>
+{% endfor %}
+
+<h2 style="text-align:center;">Total: ₹{{ total }}</h2>
+
+</body>
+</html>

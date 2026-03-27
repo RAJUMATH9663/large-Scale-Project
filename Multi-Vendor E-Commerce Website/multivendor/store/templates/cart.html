@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="page-header">
+    <h2><i class="fa-solid fa-cart-shopping"></i> Your Shopping Cart</h2>
+</div>
+
+<div class="cart-container">
+    {% if cart_items %}
+    <div class="cart-list">
+        {% for item in cart_items %}
+        <div class="cart-item card">
+            <div class="cart-item-info">
+                <h4 class="cart-item-title">{{ item.product.name }}</h4>
+                <p class="cart-item-price">₹{{ item.product.price }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="cart-summary card">
+        <h3>Order Summary</h3>
+        <div class="summary-row total">
+            <span>Total Items</span>
+            <span>{{ cart_items|length }}</span>
+        </div>
+        <a href="{% url 'checkout' %}" class="btn btn-success btn-block mt-4"><i class="fa-solid fa-credit-card"></i>
+            Proceed to Checkout</a>
+    </div>
+    {% else %}
+    <div class="empty-state w-100 card">
+        <i class="fa-solid fa-cart-arrow-down mb-3" style="font-size: 3rem; color: var(--text-muted);"></i>
+        <h3>Your cart is empty</h3>
+        <p>Looks like you haven't added anything yet.</p>
+        <a href="{% url 'home' %}" class="btn btn-primary mt-3">Start Shopping</a>
+    </div>
+    {% endif %}
+</div>
+
+{% include "pagination.html" with page_obj=cart_items %}
+{% endblock %}

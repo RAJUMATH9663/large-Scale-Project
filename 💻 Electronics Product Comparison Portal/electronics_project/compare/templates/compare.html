@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compare Products</title>
+    <style>
+        body { font-family: Arial; background:#f9fafb; }
+        .navbar { background:#111827; color:white; padding:15px; text-align:center; font-size:22px; }
+        table {
+            width:80%;
+            margin:30px auto;
+            border-collapse:collapse;
+            background:white;
+        }
+        th, td {
+            padding:12px;
+            border:1px solid #ddd;
+            text-align:center;
+        }
+        th { background:#e5e7eb; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">Product Comparison</div>
+
+<form method="GET" style="text-align:center;">
+    <select name="product1">
+        {% for p in products %}
+        <option value="{{ p.id }}">{{ p.name }}</option>
+        {% endfor %}
+    </select>
+
+    <select name="product2">
+        {% for p in products %}
+        <option value="{{ p.id }}">{{ p.name }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Compare</button>
+</form>
+
+{% if product1 and product2 %}
+<table>
+    <tr>
+        <th>Feature</th>
+        <th>{{ product1.name }}</th>
+        <th>{{ product2.name }}</th>
+    </tr>
+    <tr>
+        <td>Price</td>
+        <td>₹{{ product1.price }}</td>
+        <td>₹{{ product2.price }}</td>
+    </tr>
+    <tr>
+        <td>RAM</td>
+        <td>{{ product1.ram }}</td>
+        <td>{{ product2.ram }}</td>
+    </tr>
+    <tr>
+        <td>Storage</td>
+        <td>{{ product1.storage }}</td>
+        <td>{{ product2.storage }}</td>
+    </tr>
+    <tr>
+        <td>Camera</td>
+        <td>{{ product1.camera }}</td>
+        <td>{{ product2.camera }}</td>
+    </tr>
+    <tr>
+        <td>Battery</td>
+        <td>{{ product1.battery }}</td>
+        <td>{{ product2.battery }}</td>
+    </tr>
+</table>
+{% endif %}
+
+</body>
+</html>

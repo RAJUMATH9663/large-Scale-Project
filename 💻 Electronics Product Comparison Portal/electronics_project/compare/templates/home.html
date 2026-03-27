@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electronics Store</title>
+    <style>
+        body { font-family: Arial; background:#f4f6f9; }
+        .navbar { background:#1f2937; color:white; padding:15px; text-align:center; font-size:22px; }
+        .container { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; padding:20px; }
+        .card {
+            background:white;
+            padding:15px;
+            border-radius:8px;
+            box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+            text-align:center;
+        }
+        .card img { width:100%; height:200px; object-fit:cover; }
+        .btn {
+            background:#2563eb;
+            color:white;
+            padding:8px 12px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        .btn:hover { background:#1d4ed8; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">Electronics Product Portal</div>
+
+<div class="container">
+    {% for product in products %}
+    <div class="card">
+        <img src="{{ product.image.url }}">
+        <h3>{{ product.name }}</h3>
+        <p>Brand: {{ product.brand.name }}</p>
+        <p>₹{{ product.price }}</p>
+        <a href="/compare/?product1={{ product.id }}">
+            <button class="btn">Compare</button>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
