@@ -1,0 +1,1928 @@
+dataai_backend  | INFO:     Will watch for changes in these directories: ['/app']
+dataai_backend  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+dataai_backend  | INFO:     Started reloader process [1] using WatchFiles
+dataai_backend  | /usr/local/lib/python3.11/site-packages/pydantic/_internal/_fields.py:160: UserWarning: Field "model_type" has conflict with protected namespace "model_".
+dataai_backend  | 
+dataai_backend  | You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+dataai_backend  |   warnings.warn(
+dataai_backend  | INFO:     Started server process [8]
+dataai_backend  | INFO:     Waiting for application startup.
+dataai_backend  | 2026-03-22 09:07:27,369 INFO sqlalchemy.engine.Engine select pg_catalog.version()
+dataai_backend  | 2026-03-22 09:07:27,369 INFO sqlalchemy.engine.Engine [raw sql] ()
+dataai_backend  | 2026-03-22 09:07:27,374 INFO sqlalchemy.engine.Engine select current_schema()
+dataai_backend  | 2026-03-22 09:07:27,374 INFO sqlalchemy.engine.Engine [raw sql] ()
+dataai_backend  | 2026-03-22 09:07:27,378 INFO sqlalchemy.engine.Engine show standard_conforming_strings
+dataai_backend  | 2026-03-22 09:07:27,378 INFO sqlalchemy.engine.Engine [raw sql] ()
+dataai_backend  | 2026-03-22 09:07:27,382 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:07:27,391 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+dataai_backend  | FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+dataai_backend  | WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+dataai_backend  | 2026-03-22 09:07:27,391 INFO sqlalchemy.engine.Engine [generated in 0.00055s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+dataai_backend  | 2026-03-22 09:07:27,422 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+dataai_backend  | FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+dataai_backend  | WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+dataai_backend  | 2026-03-22 09:07:27,422 INFO sqlalchemy.engine.Engine [cached since 0.03209s ago] ('datasets', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+dataai_backend  | 2026-03-22 09:07:27,424 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+dataai_backend  | FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+dataai_backend  | WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+dataai_backend  | 2026-03-22 09:07:27,424 INFO sqlalchemy.engine.Engine [cached since 0.03431s ago] ('query_history', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+dataai_backend  | 2026-03-22 09:07:27,427 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+dataai_backend  | FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+dataai_backend  | WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+dataai_backend  | 2026-03-22 09:07:27,427 INFO sqlalchemy.engine.Engine [cached since 0.03655s ago] ('predictions', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+dataai_backend  | 2026-03-22 09:07:27,429 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+dataai_backend  | FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+dataai_backend  | WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+dataai_backend  | 2026-03-22 09:07:27,429 INFO sqlalchemy.engine.Engine [cached since 0.03862s ago] ('simulations', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+dataai_backend  | 2026-03-22 09:07:27,431 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+dataai_backend  | FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+dataai_backend  | WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+dataai_backend  | 2026-03-22 09:07:27,432 INFO sqlalchemy.engine.Engine [cached since 0.0414s ago] ('evaluation_results', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+dataai_backend  | 2026-03-22 09:07:27,434 INFO sqlalchemy.engine.Engine SELECT pg_catalog.pg_class.relname 
+dataai_backend  | FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+dataai_backend  | WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+dataai_backend  | 2026-03-22 09:07:27,434 INFO sqlalchemy.engine.Engine [cached since 0.04371s ago] ('monitoring_logs', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+dataai_backend  | 2026-03-22 09:07:27,437 INFO sqlalchemy.engine.Engine 
+dataai_backend  | CREATE TABLE users (
+dataai_backend  | 	id SERIAL NOT NULL, 
+dataai_backend  | 	email VARCHAR NOT NULL, 
+dataai_backend  | 	username VARCHAR NOT NULL, 
+dataai_backend  | 	hashed_password VARCHAR NOT NULL, 
+dataai_backend  | 	role VARCHAR, 
+dataai_backend  | 	is_active BOOLEAN, 
+dataai_backend  | 	created_at TIMESTAMP WITHOUT TIME ZONE, 
+dataai_backend  | 	PRIMARY KEY (id)
+dataai_backend  | )
+dataai_backend  | 
+dataai_backend  | 
+dataai_backend  | 2026-03-22 09:07:27,437 INFO sqlalchemy.engine.Engine [no key 0.00028s] ()
+dataai_backend  | 2026-03-22 09:07:27,486 INFO sqlalchemy.engine.Engine CREATE UNIQUE INDEX ix_users_username ON users (username)
+dataai_backend  | 2026-03-22 09:07:27,486 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+dataai_backend  | 2026-03-22 09:07:27,497 INFO sqlalchemy.engine.Engine CREATE INDEX ix_users_id ON users (id)
+dataai_backend  | 2026-03-22 09:07:27,498 INFO sqlalchemy.engine.Engine [no key 0.00019s] ()
+dataai_backend  | 2026-03-22 09:07:27,505 INFO sqlalchemy.engine.Engine CREATE UNIQUE INDEX ix_users_email ON users (email)
+dataai_backend  | 2026-03-22 09:07:27,505 INFO sqlalchemy.engine.Engine [no key 0.00019s] ()
+dataai_backend  | 2026-03-22 09:07:27,513 INFO sqlalchemy.engine.Engine 
+dataai_backend  | CREATE TABLE simulations (
+dataai_backend  | 	id SERIAL NOT NULL, 
+dataai_backend  | 	dataset_id INTEGER, 
+dataai_backend  | 	variables JSON, 
+dataai_backend  | 	results JSON, 
+dataai_backend  | 	created_at TIMESTAMP WITHOUT TIME ZONE, 
+dataai_backend  | 	PRIMARY KEY (id)
+dataai_backend  | )
+dataai_backend  | 
+dataai_backend  | 
+dataai_backend  | 2026-03-22 09:07:27,513 INFO sqlalchemy.engine.Engine [no key 0.00016s] ()
+dataai_backend  | 2026-03-22 09:07:27,534 INFO sqlalchemy.engine.Engine CREATE INDEX ix_simulations_id ON simulations (id)
+dataai_backend  | 2026-03-22 09:07:27,534 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+dataai_backend  | 2026-03-22 09:07:27,543 INFO sqlalchemy.engine.Engine 
+dataai_backend  | CREATE TABLE monitoring_logs (
+dataai_backend  | 	id SERIAL NOT NULL, 
+dataai_backend  | 	endpoint VARCHAR, 
+dataai_backend  | 	method VARCHAR, 
+dataai_backend  | 	status_code INTEGER, 
+dataai_backend  | 	latency_ms FLOAT, 
+dataai_backend  | 	user_id INTEGER, 
+dataai_backend  | 	error_message TEXT, 
+dataai_backend  | 	created_at TIMESTAMP WITHOUT TIME ZONE, 
+dataai_backend  | 	PRIMARY KEY (id)
+dataai_backend  | )
+dataai_backend  | 
+dataai_backend  | 
+dataai_backend  | 2026-03-22 09:07:27,543 INFO sqlalchemy.engine.Engine [no key 0.00017s] ()
+dataai_backend  | 2026-03-22 09:07:27,564 INFO sqlalchemy.engine.Engine CREATE INDEX ix_monitoring_logs_id ON monitoring_logs (id)
+dataai_backend  | 2026-03-22 09:07:27,564 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+dataai_backend  | 2026-03-22 09:07:27,573 INFO sqlalchemy.engine.Engine 
+dataai_backend  | CREATE TABLE datasets (
+dataai_backend  | 	id SERIAL NOT NULL, 
+dataai_backend  | 	name VARCHAR NOT NULL, 
+dataai_backend  | 	filename VARCHAR NOT NULL, 
+dataai_backend  | 	file_path VARCHAR NOT NULL, 
+dataai_backend  | 	file_type VARCHAR, 
+dataai_backend  | 	rows INTEGER, 
+dataai_backend  | 	columns INTEGER, 
+dataai_backend  | 	size_bytes INTEGER, 
+dataai_backend  | 	version INTEGER, 
+dataai_backend  | 	status VARCHAR, 
+dataai_backend  | 	meta JSON, 
+dataai_backend  | 	owner_id INTEGER, 
+dataai_backend  | 	created_at TIMESTAMP WITHOUT TIME ZONE, 
+dataai_backend  | 	PRIMARY KEY (id), 
+dataai_backend  | 	FOREIGN KEY(owner_id) REFERENCES users (id)
+dataai_backend  | )
+dataai_backend  | 
+dataai_backend  | 
+dataai_backend  | 2026-03-22 09:07:27,573 INFO sqlalchemy.engine.Engine [no key 0.00017s] ()
+dataai_backend  | 2026-03-22 09:07:27,600 INFO sqlalchemy.engine.Engine CREATE INDEX ix_datasets_id ON datasets (id)
+dataai_backend  | 2026-03-22 09:07:27,601 INFO sqlalchemy.engine.Engine [no key 0.00030s] ()
+dataai_backend  | 2026-03-22 09:07:27,609 INFO sqlalchemy.engine.Engine 
+dataai_backend  | CREATE TABLE query_history (
+dataai_backend  | 	id SERIAL NOT NULL, 
+dataai_backend  | 	user_id INTEGER, 
+dataai_backend  | 	dataset_id INTEGER, 
+dataai_backend  | 	query TEXT NOT NULL, 
+dataai_backend  | 	response TEXT, 
+dataai_backend  | 	model_used VARCHAR, 
+dataai_backend  | 	tokens_used INTEGER, 
+dataai_backend  | 	latency_ms FLOAT, 
+dataai_backend  | 	accuracy_score FLOAT, 
+dataai_backend  | 	relevance_score FLOAT, 
+dataai_backend  | 	created_at TIMESTAMP WITHOUT TIME ZONE, 
+dataai_backend  | 	PRIMARY KEY (id), 
+dataai_backend  | 	FOREIGN KEY(user_id) REFERENCES users (id)
+dataai_backend  | )
+dataai_backend  | 
+dataai_backend  | 
+dataai_backend  | 2026-03-22 09:07:27,610 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+dataai_backend  | 2026-03-22 09:07:27,633 INFO sqlalchemy.engine.Engine CREATE INDEX ix_query_history_id ON query_history (id)
+dataai_backend  | 2026-03-22 09:07:27,634 INFO sqlalchemy.engine.Engine [no key 0.00034s] ()
+dataai_backend  | 2026-03-22 09:07:27,641 INFO sqlalchemy.engine.Engine 
+dataai_backend  | CREATE TABLE predictions (
+dataai_backend  | 	id SERIAL NOT NULL, 
+dataai_backend  | 	dataset_id INTEGER, 
+dataai_backend  | 	target_column VARCHAR, 
+dataai_backend  | 	model_type VARCHAR, 
+dataai_backend  | 	metrics JSON, 
+dataai_backend  | 	feature_importance JSON, 
+dataai_backend  | 	forecast_data JSON, 
+dataai_backend  | 	created_at TIMESTAMP WITHOUT TIME ZONE, 
+dataai_backend  | 	PRIMARY KEY (id), 
+dataai_backend  | 	FOREIGN KEY(dataset_id) REFERENCES datasets (id)
+dataai_backend  | )
+dataai_backend  | 
+dataai_backend  | 
+dataai_backend  | 2026-03-22 09:07:27,642 INFO sqlalchemy.engine.Engine [no key 0.00019s] ()
+dataai_backend  | 2026-03-22 09:07:27,664 INFO sqlalchemy.engine.Engine CREATE INDEX ix_predictions_id ON predictions (id)
+dataai_backend  | 2026-03-22 09:07:27,664 INFO sqlalchemy.engine.Engine [no key 0.00019s] ()
+dataai_backend  | 2026-03-22 09:07:27,671 INFO sqlalchemy.engine.Engine 
+dataai_backend  | CREATE TABLE evaluation_results (
+dataai_backend  | 	id SERIAL NOT NULL, 
+dataai_backend  | 	query_id INTEGER, 
+dataai_backend  | 	context_recall FLOAT, 
+dataai_backend  | 	context_precision FLOAT, 
+dataai_backend  | 	faithfulness FLOAT, 
+dataai_backend  | 	answer_relevancy FLOAT, 
+dataai_backend  | 	raw_scores JSON, 
+dataai_backend  | 	created_at TIMESTAMP WITHOUT TIME ZONE, 
+dataai_backend  | 	PRIMARY KEY (id), 
+dataai_backend  | 	FOREIGN KEY(query_id) REFERENCES query_history (id)
+dataai_backend  | )
+dataai_backend  | 
+dataai_backend  | 
+dataai_backend  | 2026-03-22 09:07:27,672 INFO sqlalchemy.engine.Engine [no key 0.00016s] ()
+dataai_backend  | 2026-03-22 09:07:27,693 INFO sqlalchemy.engine.Engine CREATE INDEX ix_evaluation_results_id ON evaluation_results (id)
+dataai_backend  | 2026-03-22 09:07:27,693 INFO sqlalchemy.engine.Engine [no key 0.00017s] ()
+dataai_backend  | 2026-03-22 09:07:27,700 INFO sqlalchemy.engine.Engine COMMIT
+dataai_backend  | INFO:     Application startup complete.
+dataai_backend  | ✅ Database initialized
+dataai_backend  | 2026-03-22 09:09:09,251 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:09:09,285 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.username, users.hashed_password, users.role, users.is_active, users.created_at 
+dataai_backend  | FROM users 
+dataai_backend  | WHERE users.email = $1::VARCHAR
+dataai_backend  | 2026-03-22 09:09:09,285 INFO sqlalchemy.engine.Engine [generated in 0.00061s] ('rajumthpt@gmail.com',)
+dataai_backend  | 2026-03-22 09:09:09,298 INFO sqlalchemy.engine.Engine ROLLBACK
+dataai_backend  | 2026-03-22 09:09:09,302 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:09:09,305 INFO sqlalchemy.engine.Engine INSERT INTO monitoring_logs (endpoint, method, status_code, latency_ms, user_id, error_message, created_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::FLOAT, $5::INTEGER, $6::VARCHAR, $7::TIMESTAMP WITHOUT TIME ZONE) RETURNING monitoring_logs.id
+dataai_backend  | 2026-03-22 09:09:09,305 INFO sqlalchemy.engine.Engine [generated in 0.00053s] ('/api/auth/login', 'POST', 401, 60.09, None, None, datetime.datetime(2026, 3, 22, 9, 9, 9, 305143))
+dataai_backend  | 2026-03-22 09:09:09,311 INFO sqlalchemy.engine.Engine COMMIT
+dataai_backend  | INFO:     172.18.0.1:37526 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+dataai_backend  | 2026-03-22 09:09:21,371 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:09:21,371 INFO sqlalchemy.engine.Engine INSERT INTO monitoring_logs (endpoint, method, status_code, latency_ms, user_id, error_message, created_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::FLOAT, $5::INTEGER, $6::VARCHAR, $7::TIMESTAMP WITHOUT TIME ZONE) RETURNING monitoring_logs.id
+dataai_backend  | 2026-03-22 09:09:21,372 INFO sqlalchemy.engine.Engine [cached since 12.07s ago] ('/api/auth/register', 'OPTIONS', 200, 0.51, None, None, datetime.datetime(2026, 3, 22, 9, 9, 21, 371935))
+dataai_backend  | 2026-03-22 09:09:21,374 INFO sqlalchemy.engine.Engine COMMIT
+dataai_backend  | INFO:     172.18.0.1:36106 - "OPTIONS /api/auth/register HTTP/1.1" 200 OK
+dataai_backend  | 2026-03-22 09:09:21,399 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:09:21,400 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.username, users.hashed_password, users.role, users.is_active, users.created_at 
+dataai_backend  | FROM users 
+dataai_backend  | WHERE users.email = $1::VARCHAR
+dataai_backend  | 2026-03-22 09:09:21,400 INFO sqlalchemy.engine.Engine [cached since 12.12s ago] ('rajumthpt@gmail.com',)
+dataai_backend  | (trapped) error reading bcrypt version
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+dataai_backend  |     version = _bcrypt.__about__.__version__
+dataai_backend  |               ^^^^^^^^^^^^^^^^^
+dataai_backend  | AttributeError: module 'bcrypt' has no attribute '__about__'
+dataai_backend  | 2026-03-22 09:09:21,415 INFO sqlalchemy.engine.Engine ROLLBACK
+dataai_backend  | INFO:     172.18.0.1:36106 - "POST /api/auth/register HTTP/1.1" 500 Internal Server Error
+dataai_backend  | ERROR:    Exception in ASGI application
+dataai_backend  |   + Exception Group Traceback (most recent call last):
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+dataai_backend  |   |     yield
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 190, in __call__
+dataai_backend  |   |     async with anyio.create_task_group() as task_group:
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+dataai_backend  |   |     raise BaseExceptionGroup(
+dataai_backend  |   | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+dataai_backend  |   +-+---------------- 1 ----------------
+dataai_backend  |     | Traceback (most recent call last):
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |     |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     |     return await self.app(scope, receive, send)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     |     await super().__call__(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     |     await self.app(scope, receive, _send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     |     with collapse_excgroups():
+dataai_backend  |     |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     |     self.gen.throw(typ, value, traceback)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     |     response = await call_next(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     |     raise app_exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     |     await route.handle(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     |     response = await func(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     |     raw_response = await run_endpoint_function(
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     |     return await dependant.call(**values)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     |     hashed_password=hash_password(payload.password),
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     |     return pwd_context.hash(password)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     |     return record.hash(secret, **kwds)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     |     self._stub_requires_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     |     cls.set_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     |     cls._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     |     ok = loader(**kwds)
+dataai_backend  |     |          ^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     |     if verify(secret, bug_hash):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  |     +------------------------------------
+dataai_backend  | 
+dataai_backend  | During handling of the above exception, another exception occurred:
+dataai_backend  | 
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     return await self.app(scope, receive, send)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     await super().__call__(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     await self.app(scope, receive, _send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     with collapse_excgroups():
+dataai_backend  |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     self.gen.throw(typ, value, traceback)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     response = await call_next(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     raise app_exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     await route.handle(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     response = await func(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     raw_response = await run_endpoint_function(
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     return await dependant.call(**values)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     hashed_password=hash_password(payload.password),
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     return pwd_context.hash(password)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     return record.hash(secret, **kwds)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     self._stub_requires_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     cls.set_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     cls._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     ok = loader(**kwds)
+dataai_backend  |          ^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     if verify(secret, bug_hash):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  | 2026-03-22 09:09:28,668 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:09:28,668 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.username, users.hashed_password, users.role, users.is_active, users.created_at 
+dataai_backend  | FROM users 
+dataai_backend  | WHERE users.email = $1::VARCHAR
+dataai_backend  | 2026-03-22 09:09:28,668 INFO sqlalchemy.engine.Engine [cached since 19.39s ago] ('rajumthpt@gmail.com',)
+dataai_backend  | (trapped) error reading bcrypt version
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+dataai_backend  |     version = _bcrypt.__about__.__version__
+dataai_backend  |               ^^^^^^^^^^^^^^^^^
+dataai_backend  | AttributeError: module 'bcrypt' has no attribute '__about__'
+dataai_backend  | 2026-03-22 09:09:28,686 INFO sqlalchemy.engine.Engine ROLLBACK
+dataai_backend  | INFO:     172.18.0.1:36120 - "POST /api/auth/register HTTP/1.1" 500 Internal Server Error
+dataai_backend  | ERROR:    Exception in ASGI application
+dataai_backend  |   + Exception Group Traceback (most recent call last):
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+dataai_backend  |   |     yield
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 190, in __call__
+dataai_backend  |   |     async with anyio.create_task_group() as task_group:
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+dataai_backend  |   |     raise BaseExceptionGroup(
+dataai_backend  |   | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+dataai_backend  |   +-+---------------- 1 ----------------
+dataai_backend  |     | Traceback (most recent call last):
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |     |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     |     return await self.app(scope, receive, send)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     |     await super().__call__(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     |     await self.app(scope, receive, _send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     |     with collapse_excgroups():
+dataai_backend  |     |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     |     self.gen.throw(typ, value, traceback)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     |     response = await call_next(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     |     raise app_exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     |     await route.handle(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     |     response = await func(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     |     raw_response = await run_endpoint_function(
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     |     return await dependant.call(**values)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     |     hashed_password=hash_password(payload.password),
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     |     return pwd_context.hash(password)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     |     return record.hash(secret, **kwds)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     |     self._stub_requires_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     |     cls.set_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     |     cls._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     |     ok = loader(**kwds)
+dataai_backend  |     |          ^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     |     if verify(secret, bug_hash):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  |     +------------------------------------
+dataai_backend  | 
+dataai_backend  | During handling of the above exception, another exception occurred:
+dataai_backend  | 
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     return await self.app(scope, receive, send)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     await super().__call__(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     await self.app(scope, receive, _send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     with collapse_excgroups():
+dataai_backend  |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     self.gen.throw(typ, value, traceback)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     response = await call_next(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     raise app_exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     await route.handle(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     response = await func(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     raw_response = await run_endpoint_function(
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     return await dependant.call(**values)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     hashed_password=hash_password(payload.password),
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     return pwd_context.hash(password)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     return record.hash(secret, **kwds)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     self._stub_requires_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     cls.set_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     cls._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     ok = loader(**kwds)
+dataai_backend  |          ^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     if verify(secret, bug_hash):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  | 2026-03-22 09:09:50,223 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:09:50,224 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.username, users.hashed_password, users.role, users.is_active, users.created_at 
+dataai_backend  | FROM users 
+dataai_backend  | WHERE users.email = $1::VARCHAR
+dataai_backend  | 2026-03-22 09:09:50,224 INFO sqlalchemy.engine.Engine [cached since 40.95s ago] ('rajumthpt@gmail.com',)
+dataai_backend  | 2026-03-22 09:09:50,227 INFO sqlalchemy.engine.Engine ROLLBACK
+dataai_backend  | 2026-03-22 09:09:50,229 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:09:50,230 INFO sqlalchemy.engine.Engine INSERT INTO monitoring_logs (endpoint, method, status_code, latency_ms, user_id, error_message, created_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::FLOAT, $5::INTEGER, $6::VARCHAR, $7::TIMESTAMP WITHOUT TIME ZONE) RETURNING monitoring_logs.id
+dataai_backend  | 2026-03-22 09:09:50,230 INFO sqlalchemy.engine.Engine [cached since 40.93s ago] ('/api/auth/login', 'POST', 401, 15.53, None, None, datetime.datetime(2026, 3, 22, 9, 9, 50, 230266))
+dataai_backend  | 2026-03-22 09:09:50,232 INFO sqlalchemy.engine.Engine COMMIT
+dataai_backend  | INFO:     172.18.0.1:56768 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+dataai_backend  | 2026-03-22 09:10:14,698 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:10:14,699 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.username, users.hashed_password, users.role, users.is_active, users.created_at 
+dataai_backend  | FROM users 
+dataai_backend  | WHERE users.email = $1::VARCHAR
+dataai_backend  | 2026-03-22 09:10:14,699 INFO sqlalchemy.engine.Engine [cached since 65.42s ago] ('vcvcfx@gmail.com',)
+dataai_backend  | (trapped) error reading bcrypt version
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+dataai_backend  |     version = _bcrypt.__about__.__version__
+dataai_backend  |               ^^^^^^^^^^^^^^^^^
+dataai_backend  | AttributeError: module 'bcrypt' has no attribute '__about__'
+dataai_backend  | 2026-03-22 09:10:14,718 INFO sqlalchemy.engine.Engine ROLLBACK
+dataai_backend  | INFO:     172.18.0.1:57370 - "POST /api/auth/register HTTP/1.1" 500 Internal Server Error
+dataai_backend  | ERROR:    Exception in ASGI application
+dataai_backend  |   + Exception Group Traceback (most recent call last):
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+dataai_backend  |   |     yield
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 190, in __call__
+dataai_backend  |   |     async with anyio.create_task_group() as task_group:
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+dataai_backend  |   |     raise BaseExceptionGroup(
+dataai_backend  |   | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+dataai_backend  |   +-+---------------- 1 ----------------
+dataai_backend  |     | Traceback (most recent call last):
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |     |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     |     return await self.app(scope, receive, send)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     |     await super().__call__(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     |     await self.app(scope, receive, _send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     |     with collapse_excgroups():
+dataai_backend  |     |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     |     self.gen.throw(typ, value, traceback)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     |     response = await call_next(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     |     raise app_exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     |     await route.handle(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     |     response = await func(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     |     raw_response = await run_endpoint_function(
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     |     return await dependant.call(**values)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     |     hashed_password=hash_password(payload.password),
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     |     return pwd_context.hash(password)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     |     return record.hash(secret, **kwds)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     |     self._stub_requires_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     |     cls.set_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     |     cls._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     |     ok = loader(**kwds)
+dataai_backend  |     |          ^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     |     if verify(secret, bug_hash):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  |     +------------------------------------
+dataai_backend  | 
+dataai_backend  | During handling of the above exception, another exception occurred:
+dataai_backend  | 
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     return await self.app(scope, receive, send)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     await super().__call__(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     await self.app(scope, receive, _send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     with collapse_excgroups():
+dataai_backend  |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     self.gen.throw(typ, value, traceback)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     response = await call_next(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     raise app_exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     await route.handle(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     response = await func(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     raw_response = await run_endpoint_function(
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     return await dependant.call(**values)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     hashed_password=hash_password(payload.password),
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     return pwd_context.hash(password)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     return record.hash(secret, **kwds)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     self._stub_requires_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     cls.set_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     cls._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     ok = loader(**kwds)
+dataai_backend  |          ^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     if verify(secret, bug_hash):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  | 2026-03-22 09:10:35,893 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:10:35,893 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.username, users.hashed_password, users.role, users.is_active, users.created_at 
+dataai_backend  | FROM users 
+dataai_backend  | WHERE users.email = $1::VARCHAR
+dataai_backend  | 2026-03-22 09:10:35,894 INFO sqlalchemy.engine.Engine [cached since 86.62s ago] ('rajumthpt@gmail.com',)
+dataai_backend  | (trapped) error reading bcrypt version
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+dataai_backend  |     version = _bcrypt.__about__.__version__
+dataai_backend  |               ^^^^^^^^^^^^^^^^^
+dataai_backend  | AttributeError: module 'bcrypt' has no attribute '__about__'
+dataai_backend  | 2026-03-22 09:10:35,910 INFO sqlalchemy.engine.Engine ROLLBACK
+dataai_backend  | INFO:     172.18.0.1:51778 - "POST /api/auth/register HTTP/1.1" 500 Internal Server Error
+dataai_backend  | ERROR:    Exception in ASGI application
+dataai_backend  |   + Exception Group Traceback (most recent call last):
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+dataai_backend  |   |     yield
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 190, in __call__
+dataai_backend  |   |     async with anyio.create_task_group() as task_group:
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+dataai_backend  |   |     raise BaseExceptionGroup(
+dataai_backend  |   | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+dataai_backend  |   +-+---------------- 1 ----------------
+dataai_backend  |     | Traceback (most recent call last):
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |     |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     |     return await self.app(scope, receive, send)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     |     await super().__call__(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     |     await self.app(scope, receive, _send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     |     with collapse_excgroups():
+dataai_backend  |     |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     |     self.gen.throw(typ, value, traceback)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     |     response = await call_next(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     |     raise app_exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     |     await route.handle(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     |     response = await func(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     |     raw_response = await run_endpoint_function(
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     |     return await dependant.call(**values)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     |     hashed_password=hash_password(payload.password),
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     |     return pwd_context.hash(password)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     |     return record.hash(secret, **kwds)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     |     self._stub_requires_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     |     cls.set_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     |     cls._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     |     ok = loader(**kwds)
+dataai_backend  |     |          ^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     |     if verify(secret, bug_hash):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  |     +------------------------------------
+dataai_backend  | 
+dataai_backend  | During handling of the above exception, another exception occurred:
+dataai_backend  | 
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     return await self.app(scope, receive, send)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     await super().__call__(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     await self.app(scope, receive, _send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     with collapse_excgroups():
+dataai_backend  |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     self.gen.throw(typ, value, traceback)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     response = await call_next(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     raise app_exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     await route.handle(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     response = await func(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     raw_response = await run_endpoint_function(
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     return await dependant.call(**values)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     hashed_password=hash_password(payload.password),
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     return pwd_context.hash(password)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     return record.hash(secret, **kwds)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     self._stub_requires_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     cls.set_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     cls._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     ok = loader(**kwds)
+dataai_backend  |          ^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     if verify(secret, bug_hash):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  | 2026-03-22 09:10:41,180 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:10:41,181 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.username, users.hashed_password, users.role, users.is_active, users.created_at 
+dataai_backend  | FROM users 
+dataai_backend  | WHERE users.email = $1::VARCHAR
+dataai_backend  | 2026-03-22 09:10:41,181 INFO sqlalchemy.engine.Engine [cached since 91.91s ago] ('rajumthpt@gmail.com',)
+dataai_backend  | 2026-03-22 09:10:41,184 INFO sqlalchemy.engine.Engine ROLLBACK
+dataai_backend  | 2026-03-22 09:10:41,186 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:10:41,187 INFO sqlalchemy.engine.Engine INSERT INTO monitoring_logs (endpoint, method, status_code, latency_ms, user_id, error_message, created_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::FLOAT, $5::INTEGER, $6::VARCHAR, $7::TIMESTAMP WITHOUT TIME ZONE) RETURNING monitoring_logs.id
+dataai_backend  | 2026-03-22 09:10:41,187 INFO sqlalchemy.engine.Engine [cached since 91.89s ago] ('/api/auth/login', 'POST', 401, 8.82, None, None, datetime.datetime(2026, 3, 22, 9, 10, 41, 187455))
+dataai_backend  | 2026-03-22 09:10:41,189 INFO sqlalchemy.engine.Engine COMMIT
+dataai_backend  | INFO:     172.18.0.1:47236 - "POST /api/auth/login HTTP/1.1" 401 Unauthorized
+dataai_backend  | 2026-03-22 09:13:01,364 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:13:01,365 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.username, users.hashed_password, users.role, users.is_active, users.created_at 
+dataai_backend  | FROM users 
+dataai_backend  | WHERE users.email = $1::VARCHAR
+dataai_backend  | 2026-03-22 09:13:01,365 INFO sqlalchemy.engine.Engine [cached since 232.1s ago] ('test@test.com',)
+dataai_backend  | (trapped) error reading bcrypt version
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+dataai_backend  |     version = _bcrypt.__about__.__version__
+dataai_backend  |               ^^^^^^^^^^^^^^^^^
+dataai_backend  | AttributeError: module 'bcrypt' has no attribute '__about__'
+dataai_backend  | 2026-03-22 09:13:01,383 INFO sqlalchemy.engine.Engine ROLLBACK
+dataai_backend  | INFO:     172.18.0.1:55102 - "POST /api/auth/register HTTP/1.1" 500 Internal Server Error
+dataai_backend  | ERROR:    Exception in ASGI application
+dataai_backend  |   + Exception Group Traceback (most recent call last):
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+dataai_backend  |   |     yield
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 190, in __call__
+dataai_backend  |   |     async with anyio.create_task_group() as task_group:
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+dataai_backend  |   |     raise BaseExceptionGroup(
+dataai_backend  |   | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+dataai_backend  |   +-+---------------- 1 ----------------
+dataai_backend  |     | Traceback (most recent call last):
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |     |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     |     return await self.app(scope, receive, send)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     |     await super().__call__(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     |     await self.app(scope, receive, _send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     |     with collapse_excgroups():
+dataai_backend  |     |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     |     self.gen.throw(typ, value, traceback)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     |     response = await call_next(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     |     raise app_exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     |     await route.handle(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     |     response = await func(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     |     raw_response = await run_endpoint_function(
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     |     return await dependant.call(**values)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     |     hashed_password=hash_password(payload.password),
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     |     return pwd_context.hash(password)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     |     return record.hash(secret, **kwds)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     |     self._stub_requires_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     |     cls.set_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     |     cls._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     |     ok = loader(**kwds)
+dataai_backend  |     |          ^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     |     if verify(secret, bug_hash):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  |     +------------------------------------
+dataai_backend  | 
+dataai_backend  | During handling of the above exception, another exception occurred:
+dataai_backend  | 
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     return await self.app(scope, receive, send)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     await super().__call__(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     await self.app(scope, receive, _send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     with collapse_excgroups():
+dataai_backend  |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     self.gen.throw(typ, value, traceback)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     response = await call_next(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     raise app_exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     await route.handle(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     response = await func(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     raw_response = await run_endpoint_function(
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     return await dependant.call(**values)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     hashed_password=hash_password(payload.password),
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     return pwd_context.hash(password)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     return record.hash(secret, **kwds)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     self._stub_requires_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     cls.set_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     cls._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     ok = loader(**kwds)
+dataai_backend  |          ^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     if verify(secret, bug_hash):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  | 2026-03-22 09:13:07,323 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:13:07,324 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.username, users.hashed_password, users.role, users.is_active, users.created_at 
+dataai_backend  | FROM users 
+dataai_backend  | WHERE users.email = $1::VARCHAR
+dataai_backend  | 2026-03-22 09:13:07,325 INFO sqlalchemy.engine.Engine [cached since 238.1s ago] ('test@test.com',)
+dataai_backend  | (trapped) error reading bcrypt version
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+dataai_backend  |     version = _bcrypt.__about__.__version__
+dataai_backend  |               ^^^^^^^^^^^^^^^^^
+dataai_backend  | AttributeError: module 'bcrypt' has no attribute '__about__'
+dataai_backend  | 2026-03-22 09:13:07,340 INFO sqlalchemy.engine.Engine ROLLBACK
+dataai_backend  | INFO:     172.18.0.1:55116 - "POST /api/auth/register HTTP/1.1" 500 Internal Server Error
+dataai_backend  | ERROR:    Exception in ASGI application
+dataai_backend  |   + Exception Group Traceback (most recent call last):
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+dataai_backend  |   |     yield
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 190, in __call__
+dataai_backend  |   |     async with anyio.create_task_group() as task_group:
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+dataai_backend  |   |     raise BaseExceptionGroup(
+dataai_backend  |   | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+dataai_backend  |   +-+---------------- 1 ----------------
+dataai_backend  |     | Traceback (most recent call last):
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |     |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     |     return await self.app(scope, receive, send)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     |     await super().__call__(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     |     await self.app(scope, receive, _send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     |     with collapse_excgroups():
+dataai_backend  |     |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     |     self.gen.throw(typ, value, traceback)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     |     response = await call_next(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     |     raise app_exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     |     await route.handle(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     |     response = await func(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     |     raw_response = await run_endpoint_function(
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     |     return await dependant.call(**values)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     |     hashed_password=hash_password(payload.password),
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     |     return pwd_context.hash(password)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     |     return record.hash(secret, **kwds)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     |     self._stub_requires_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     |     cls.set_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     |     cls._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     |     ok = loader(**kwds)
+dataai_backend  |     |          ^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     |     if verify(secret, bug_hash):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  |     +------------------------------------
+dataai_backend  | 
+dataai_backend  | During handling of the above exception, another exception occurred:
+dataai_backend  | 
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     return await self.app(scope, receive, send)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     await super().__call__(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     await self.app(scope, receive, _send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     with collapse_excgroups():
+dataai_backend  |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     self.gen.throw(typ, value, traceback)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     response = await call_next(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     raise app_exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     await route.handle(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     response = await func(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     raw_response = await run_endpoint_function(
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     return await dependant.call(**values)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     hashed_password=hash_password(payload.password),
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     return pwd_context.hash(password)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     return record.hash(secret, **kwds)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     self._stub_requires_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     cls.set_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     cls._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     ok = loader(**kwds)
+dataai_backend  |          ^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     if verify(secret, bug_hash):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  | 2026-03-22 09:15:51,134 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:15:51,135 INFO sqlalchemy.engine.Engine INSERT INTO monitoring_logs (endpoint, method, status_code, latency_ms, user_id, error_message, created_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::FLOAT, $5::INTEGER, $6::VARCHAR, $7::TIMESTAMP WITHOUT TIME ZONE) RETURNING monitoring_logs.id
+dataai_backend  | 2026-03-22 09:15:51,135 INFO sqlalchemy.engine.Engine [cached since 401.9s ago] ('/docs${NC}', 'GET', 404, 3.78, None, None, datetime.datetime(2026, 3, 22, 9, 15, 51, 135598))
+dataai_backend  | 2026-03-22 09:15:51,140 INFO sqlalchemy.engine.Engine COMMIT
+dataai_backend  | INFO:     172.18.0.1:57142 - "GET /docs%24%7BNC%7D HTTP/1.1" 404 Not Found
+dataai_backend  | 2026-03-22 09:15:51,414 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:15:51,415 INFO sqlalchemy.engine.Engine INSERT INTO monitoring_logs (endpoint, method, status_code, latency_ms, user_id, error_message, created_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::FLOAT, $5::INTEGER, $6::VARCHAR, $7::TIMESTAMP WITHOUT TIME ZONE) RETURNING monitoring_logs.id
+dataai_backend  | 2026-03-22 09:15:51,415 INFO sqlalchemy.engine.Engine [cached since 402.2s ago] ('/favicon.ico', 'GET', 404, 1.26, None, None, datetime.datetime(2026, 3, 22, 9, 15, 51, 415462))
+dataai_backend  | 2026-03-22 09:15:51,418 INFO sqlalchemy.engine.Engine COMMIT
+dataai_backend  | INFO:     172.18.0.1:57142 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+dataai_backend  | 2026-03-22 09:16:14,952 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:16:14,952 INFO sqlalchemy.engine.Engine INSERT INTO monitoring_logs (endpoint, method, status_code, latency_ms, user_id, error_message, created_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::FLOAT, $5::INTEGER, $6::VARCHAR, $7::TIMESTAMP WITHOUT TIME ZONE) RETURNING monitoring_logs.id
+dataai_backend  | 2026-03-22 09:16:14,953 INFO sqlalchemy.engine.Engine [cached since 425.7s ago] ('/docs${NC}', 'GET', 404, 1.22, None, None, datetime.datetime(2026, 3, 22, 9, 16, 14, 952665))
+dataai_backend  | 2026-03-22 09:16:14,957 INFO sqlalchemy.engine.Engine COMMIT
+dataai_backend  | INFO:     172.18.0.1:35744 - "GET /docs%24%7BNC%7D HTTP/1.1" 404 Not Found
+dataai_backend  | 2026-03-22 09:16:15,454 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:16:15,455 INFO sqlalchemy.engine.Engine INSERT INTO monitoring_logs (endpoint, method, status_code, latency_ms, user_id, error_message, created_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::FLOAT, $5::INTEGER, $6::VARCHAR, $7::TIMESTAMP WITHOUT TIME ZONE) RETURNING monitoring_logs.id
+dataai_backend  | 2026-03-22 09:16:15,455 INFO sqlalchemy.engine.Engine [cached since 426.2s ago] ('/favicon.ico', 'GET', 404, 1.32, None, None, datetime.datetime(2026, 3, 22, 9, 16, 15, 455413))
+dataai_backend  | 2026-03-22 09:16:15,457 INFO sqlalchemy.engine.Engine COMMIT
+dataai_backend  | INFO:     172.18.0.1:35744 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+dataai_backend  | 2026-03-22 09:16:41,515 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:16:41,516 INFO sqlalchemy.engine.Engine INSERT INTO monitoring_logs (endpoint, method, status_code, latency_ms, user_id, error_message, created_at) VALUES ($1::VARCHAR, $2::VARCHAR, $3::INTEGER, $4::FLOAT, $5::INTEGER, $6::VARCHAR, $7::TIMESTAMP WITHOUT TIME ZONE) RETURNING monitoring_logs.id
+dataai_backend  | 2026-03-22 09:16:41,516 INFO sqlalchemy.engine.Engine [cached since 452.3s ago] ('/api/auth/register', 'OPTIONS', 200, 0.5, None, None, datetime.datetime(2026, 3, 22, 9, 16, 41, 516198))
+dataai_backend  | 2026-03-22 09:16:41,518 INFO sqlalchemy.engine.Engine COMMIT
+dataai_backend  | INFO:     172.18.0.1:56630 - "OPTIONS /api/auth/register HTTP/1.1" 200 OK
+dataai_backend  | 2026-03-22 09:16:41,532 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+dataai_backend  | 2026-03-22 09:16:41,533 INFO sqlalchemy.engine.Engine SELECT users.id, users.email, users.username, users.hashed_password, users.role, users.is_active, users.created_at 
+dataai_backend  | FROM users 
+dataai_backend  | WHERE users.email = $1::VARCHAR
+dataai_backend  | 2026-03-22 09:16:41,534 INFO sqlalchemy.engine.Engine [cached since 452.3s ago] ('rajumthpt@gmail.com',)
+dataai_backend  | (trapped) error reading bcrypt version
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+dataai_backend  |     version = _bcrypt.__about__.__version__
+dataai_backend  |               ^^^^^^^^^^^^^^^^^
+dataai_backend  | AttributeError: module 'bcrypt' has no attribute '__about__'
+dataai_backend  | 2026-03-22 09:16:41,551 INFO sqlalchemy.engine.Engine ROLLBACK
+dataai_backend  | INFO:     172.18.0.1:56630 - "POST /api/auth/register HTTP/1.1" 500 Internal Server Error
+dataai_backend  | ERROR:    Exception in ASGI application
+dataai_backend  |   + Exception Group Traceback (most recent call last):
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 87, in collapse_excgroups
+dataai_backend  |   |     yield
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 190, in __call__
+dataai_backend  |   |     async with anyio.create_task_group() as task_group:
+dataai_backend  |   |   File "/usr/local/lib/python3.11/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+dataai_backend  |   |     raise BaseExceptionGroup(
+dataai_backend  |   | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+dataai_backend  |   +-+---------------- 1 ----------------
+dataai_backend  |     | Traceback (most recent call last):
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |     |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     |     return await self.app(scope, receive, send)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     |     await super().__call__(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     |     await self.app(scope, receive, _send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     |     with collapse_excgroups():
+dataai_backend  |     |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     |     self.gen.throw(typ, value, traceback)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     |     response = await call_next(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     |     raise app_exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     |     await route.handle(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     |     await self.app(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     |     raise exc
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     |     await app(scope, receive, sender)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     |     response = await func(request)
+dataai_backend  |     |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     |     raw_response = await run_endpoint_function(
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     |     return await dependant.call(**values)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     |     hashed_password=hash_password(payload.password),
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     |     return pwd_context.hash(password)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     |     return record.hash(secret, **kwds)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     |     self._stub_requires_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     |     cls.set_backend()
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     |     cls._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     |     ok = loader(**kwds)
+dataai_backend  |     |          ^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     |     if verify(secret, bug_hash):
+dataai_backend  |     |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |     |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |     |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |     | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+dataai_backend  |     +------------------------------------
+dataai_backend  | 
+dataai_backend  | During handling of the above exception, another exception occurred:
+dataai_backend  | 
+dataai_backend  | Traceback (most recent call last):
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 411, in run_asgi
+dataai_backend  |     result = await app(  # type: ignore[func-returns-value]
+dataai_backend  |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 69, in __call__
+dataai_backend  |     return await self.app(scope, receive, send)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+dataai_backend  |     await super().__call__(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/applications.py", line 123, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+dataai_backend  |     await self.app(scope, receive, _send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 189, in __call__
+dataai_backend  |     with collapse_excgroups():
+dataai_backend  |   File "/usr/local/lib/python3.11/contextlib.py", line 158, in __exit__
+dataai_backend  |     self.gen.throw(typ, value, traceback)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_utils.py", line 93, in collapse_excgroups
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 191, in __call__
+dataai_backend  |     response = await self.dispatch_func(request, call_next)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/main.py", line 60, in monitoring_middleware
+dataai_backend  |     response = await call_next(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 165, in call_next
+dataai_backend  |     raise app_exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/base.py", line 151, in coro
+dataai_backend  |     await self.app(scope, receive_or_disconnect, send_no_error)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 93, in __call__
+dataai_backend  |     await self.simple_response(scope, receive, send, request_headers=headers)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/cors.py", line 148, in simple_response
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 65, in __call__
+dataai_backend  |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 756, in __call__
+dataai_backend  |     await self.middleware_stack(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 776, in app
+dataai_backend  |     await route.handle(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 297, in handle
+dataai_backend  |     await self.app(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 77, in app
+dataai_backend  |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+dataai_backend  |     raise exc
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+dataai_backend  |     await app(scope, receive, sender)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/starlette/routing.py", line 72, in app
+dataai_backend  |     response = await func(request)
+dataai_backend  |                ^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 278, in app
+dataai_backend  |     raw_response = await run_endpoint_function(
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+dataai_backend  |     return await dependant.call(**values)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/routers/auth.py", line 35, in register
+dataai_backend  |     hashed_password=hash_password(payload.password),
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/app/app/utils/auth.py", line 19, in hash_password
+dataai_backend  |     return pwd_context.hash(password)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/context.py", line 2258, in hash
+dataai_backend  |     return record.hash(secret, **kwds)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 779, in hash
+dataai_backend  |     self.checksum = self._calc_checksum(secret)
+dataai_backend  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 591, in _calc_checksum
+dataai_backend  |     self._stub_requires_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2254, in _stub_requires_backend
+dataai_backend  |     cls.set_backend()
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2156, in set_backend
+dataai_backend  |     return owner.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2163, in set_backend
+dataai_backend  |     return cls.set_backend(name, dryrun=dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2188, in set_backend
+dataai_backend  |     cls._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2311, in _set_backend
+dataai_backend  |     super(SubclassBackendMixin, cls)._set_backend(name, dryrun)
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 2224, in _set_backend
+dataai_backend  |     ok = loader(**kwds)
+dataai_backend  |          ^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 626, in _load_backend_mixin
+dataai_backend  |     return mixin_cls._finalize_backend_mixin(name, dryrun)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 421, in _finalize_backend_mixin
+dataai_backend  |     if detect_wrap_bug(IDENT_2A):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 380, in detect_wrap_bug
+dataai_backend  |     if verify(secret, bug_hash):
+dataai_backend  |        ^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/utils/handlers.py", line 792, in verify
+dataai_backend  |     return consteq(self._calc_checksum(secret), chk)
+dataai_backend  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  |   File "/usr/local/lib/python3.11/site-packages/passlib/handlers/bcrypt.py", line 655, in _calc_checksum
+dataai_backend  |     hash = _bcrypt.hashpw(secret, config)
+dataai_backend  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+dataai_backend  | ValueError: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
